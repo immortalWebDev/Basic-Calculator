@@ -61,3 +61,20 @@ button {
 .operator {
   color: #6dee0a;
 }
+
+@media (max-width: 418px) {
+  input {
+    width: 200px;
+    padding: 12px;
+  }
+
+  button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .ac,
+  .del {
+    font-size: 14px;
+  }
+}
