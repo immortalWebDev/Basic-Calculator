@@ -3,11 +3,21 @@ const buttons = document.querySelectorAll("button")
 let resultString = ""
 
 let arr = Array.from(buttons)
+
+const evaluateExpression = (expression) => {
+    try{
+        return new Function("return " + expression)();
+    }
+    catch{
+        return "Syntax Error"
+    }
+}
+
 arr.forEach(button => {
     button.addEventListener("click",(e) => {
         if(e.target.innerHTML === "=")
         {
-           resultString = eval(resultString)
+           resultString = evaluateExpression(resultString)
            input.value = resultString
         }
 
